@@ -23,3 +23,24 @@ Additionally, look at the git log, and notice that there is a **merge commit**. 
 1. Look as a group at the file in conflict, and resolve it.
 1. Use the add command to stage the fix, and then use commit to make the merge commit.
 Notice how this procedure is exactly the one you got used to when resolving conflicts in branches.
+
+## Task 2
+1. Make a commit, and make a silly typo in the commit message.
+1. Use the ```--amend``` flag to enable you to fix the commit message.
+1. Look at the log and notice how the mistake is magically gone.
+1. Now make a commit where you make a typo in one of the files. Once again, use ```--amend``` to magic away your problems.
+1. Create a branch. Make a commit.
+1. Now switch back to your master branch. Make a (non-conflicting) commit there also.
+1. Now switch back to your branch.
+1. Use the ```git rebase``` command in your branch. Look at the history graph with ```git log --pretty=format:"%h %s" --graph```, and note that you have
+the commit from the master branch, but no merge commit.
+1. Make one more commit in your branch.
+1. Return to master. Merge your branch. Notice how, thanks to the rebase, this is a fast forward merge.
+
+## Stretch Task
+1. Find somebody from your team from the previous exercise. Have them push a commit to the central repository.
+1. Make a commit locally yourself also. Note that you should not have pulled their commit at this point.
+1. Try to push, and watch it fail.
+1. Now, pull but using the ```--rebase``` flag.
+1. Use git log and use ```git log --pretty=format:"%h %s" --graph``` to verify that there is no merge commit, and the history graph is linear.
+1. Notice that your commit is the latest one, even though temporally the other member of your team made their commit afterwards. Why is this?
