@@ -4,10 +4,10 @@ For this task, you will work in a small group - between 2 and 4 people.
 1. First, one person in the group should create an empty (**Do not** initialize the repository with a README) public repository (repo) using the person's github account.
 1. This same person should then follow the instructions from github to add this github repo as a **remote** to a local repo, and push the local repo to the remote repo. Do not forget the `–u` flag, as suggested by github!
 For example, the following commands push an existing repository, `lubaochuan/test.git`, from the command line:
-`
+```
 git remote add origin git@github.com:lubaochuan/test.git
 git push -u origin master
-`
+```
 1. All of the other members of the group should then be added as collaborators, so they can commit to the repo also.
 1. Next, everyone else in the group should clone the repo from github. Verify that the context of the repo is what is expected.
 1. One of the group members who just cloned should now make a local commit, then push it. Everyone should verify that when they `git pull`, that commit is added to their local repo (use `git log` to check for it).
